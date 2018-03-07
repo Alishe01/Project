@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Add Publisher page</title>
+    <link rel="stylesheet" th:href = "@{/css/bootstrap.min.css}" />
+</head>
+<body>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="form-group">
+            <form action="#" th:action="@{/pub/add}" th:object = "${publisher}" method="POST">
+                <label for="Fname">Имя</label>
+                <input type="text" id="fname" name="name" th:field = "*{fname}" class="form-control" placeholder="Есімін енгіз" />
+
+                <label for="Lname">Фамилия</label>
+                <input type="text" id="Lname" name="last name" th:field = "*{lname}" class="form-control" placeholder="Фамилия енгіз" />
+
+                <label for="score">Оценка</label>
+                <input type="score" id="score" name="score" th:field = "*{score}" class="form-control" placeholder="Бага кой"/>
+
+                <label for="classes">Класс</label>
+                <input type="text" id="classes" name="classes" th:field = "*{classes}" class="form-control" placeholder="Класы" />
+
+                <br/>
+                <button type="submit" class="btn btn-primary">Сақтау</button>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+<script th:src = "@{/js/bootstrap.min.js}"></script>
+<script th:src="@{/js/jquery-3.3.1.min.js}"></script>
+</body>
+</html>
